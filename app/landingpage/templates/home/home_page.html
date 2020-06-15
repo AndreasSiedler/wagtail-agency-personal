@@ -1,0 +1,499 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main>
+
+    	<!--================ Start Home Banner Area =================-->
+	<section class="home_banner_area py-5">
+		<div class="banner_inner py-5">
+			<div class="container pt-5">
+				<div class="row">
+					<div class="col-lg-6 pt-5">
+						<div class="banner_content">
+							<!-- <h3 class="text-uppercase">IO Express</h3> -->
+							<h1 class="text-uppercase text-white">Web + App Entwicklung</h1>
+							<h5 class="text-uppercase text-white">clean · fair · transparent</h5>
+							<div class="d-flex align-items-center">
+								<!-- <a class="primary_btn" href="#"><span>Hire Us</span></a> -->
+								<a class="primary_btn tr-bg" href="#"><span>Projekt starten</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="">
+							<img class="w-100" src="{% static 'img/banner/home-right-3.png' %}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Home Banner Area =================-->
+
+	<!--================ Start About Us Area =================-->
+	<section class="about_area section_gap">
+		<div class="container">
+			<div class="row justify-content-start align-items-center">
+				<div class="col-lg-5">
+					<div class="about_img">
+						<img class="" src="{% static 'img/about-us.png' %}" alt="">
+					</div>
+				</div>
+
+				<div class="offset-lg-1 col-lg-5 text-center">
+					<img style="border-radius: 50%; width: 150px;" src="{% static 'img/testimonials/t0.jpg' %}" alt="">
+					<div class="main_title mt-4">
+						<h2>Das bin ich.</h2>
+						<p>
+							Mein Name ist Andreas Siedler und ich bin freiberuflich Fullstack-Entwickler. Schon seit einigen Jahren interessiere ich mich leidenschaftlich für Grafikdesign, Webdesign und Web-Development.
+						</p>
+						<p>
+
+						<a class="primary_btn" href="#"><span>Showroom</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End About Us Area =================-->
+
+	<!--================ Srart Brand Area =================-->
+	<section class="brand_area section_gap_bottom">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-6">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="{% static 'img/skills/angular.png' %}" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="{% static 'img/skills/react.png' %}" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="{% static 'img/skills/vuejs.png' %}" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="{% static 'img/skills/django.png' %}" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="{% static 'img/skills/flutter.png' %}" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="{% static 'img/skills/python.png' %}" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="{% static 'img/skills/docker.png' %}" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="{% static 'img/brands/logo8.png' %}" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="{% static 'img/skills/ionic.png' %}" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="offset-lg-2 col-lg-4 col-md-6">
+					<div class="client-info">
+						<div class="d-flex mb-50">
+							<span class="lage">x8   </span>
+							<span class="smll">Years Experience Working</span>
+						</div>
+						<div class="call-now d-flex">
+							<div>
+								<span class="fa fa-phone"></span>
+							</div>
+							<div class="ml-15">
+								<p>call me</p>
+								<h3>(+43) 676 945 7566</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Brand Area =================-->
+
+	<!--================ Start Features Area =================-->
+	<section class="features_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2>Start-to-end service </h2>
+						<p>
+							Von der Planung bis zum finalen Produktlauch. Hier bekommst du alles aus einer Hand. Transparenz im gesamten Prozess ist mir dabei besonders wichtig!
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row feature_inner">
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<img src="{% static 'img/services/s5.png' %}" alt="">
+						<h4>1. Planung</h4>
+						<p>Gemeinsam werden wir die ersten Gespräche dafür nutzen aus deinen Vorstellungen ein Konzept zu erstellen.</p>					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<img src="{% static 'img/services/s6.png' %}" alt="">
+						<h4>2. Design</h4>
+						<p>Aus dem Konzept werden erste Entwürfe und Prototypen gebaut, natürlich unter Berücksichtiung deiner Wünsche.</p>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<img src="{% static 'img/services/s1.png' %}" alt="">
+						<h4>3. Entwicklung</h4>
+						<p>Vom Produktdesign geht es dann in die Entwicklung. Dabei versuche ich die stets am Laufenden zu halten.</p>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<img src="{% static 'img/services/s2.png' %}" alt="">
+						<h4>4. Testing</h4>
+						<p>Deine Applikation wird optimal für den Launch vorbereitet und solange getestet bis selbst der kleinste Bug behoben ist.</p>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<img src="{% static 'img/services/s4.png' %}" alt="">
+						<h4>5. Optimierung</h4>
+						<p>Finale Performance- und Suchmaschinen-Optimierungen werde durchgeführt, bevor das Produkt in den Launch geht</p>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6">
+					<div class="feature_item">
+						<img src="{% static 'img/services/s3.png' %}" alt="">
+						<h4>6. Wartung</h4>
+						<p>Nach Fertigstellung biete ich zudem die Möglichkeit einer regelmäßigen Wartung und Weiterentwicklung an.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Features Area =================-->
+
+	<!--================Start Portfolio Area =================-->
+	<section class="portfolio_area" id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title text-left">
+						<h2>Kürzlich <br>
+							abgeschlossene Projekte </h2>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="filters portfolio-filter">
+				<ul>
+					<li class="active" data-filter="*">all</li>
+					<li data-filter=".popular">popular</li>
+					<li data-filter=".latest"> latest</li>
+					<li data-filter=".following">following</li>
+					<li data-filter=".upcoming">upcoming</li>
+				</ul>
+			</div> -->
+	
+			<div class="filters-content">
+				<div class="row portfolio-grid justify-content-center">
+					<div class="col-lg-6 col-md-6 all latest">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="{% static 'img/portfolio/p1.jpg' %}" alt="">
+								<div class="overlay"></div>
+								<!-- <a href="{% static 'img/portfolio/p1.jpg' %" class="img-gal"> -->
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								<!-- </a> -->
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">Django (Python) Dashboard</a></h4>
+								<p>Waytation, 2020</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 all popular">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="{% static 'img/portfolio/p2.jpg' %}" alt="">
+								<div class="overlay"></div>
+								<!-- <a href="{% static 'img/portfolio/p2.jpg' %}" class="img-gal"> -->
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								<!-- </a> -->
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">React Single-Page Applikation</a></h4>
+								<p>Waytation, 2020</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 all latest">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="{% static 'img/portfolio/p3.jpg' %}" alt="">
+								<div class="overlay"></div>
+								<!-- <a href="{% static 'img/portfolio/p3.jpg' %}" class="img-gal"> -->
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								<!-- </a> -->
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">Node.js Applikation</a></h4>
+								<p>Waytation, 2019</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 all popular">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="{% static 'img/portfolio/p4.jpg' %}" alt="">
+								<div class="overlay"></div>
+								<!-- <a href="{% static 'img/portfolio/p4.jpg' %}" class="img-gal"> -->
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								<!-- </a> -->
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">Shopware Onlineshop</a></h4>
+								<p>Apoolco, 2019</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 all following">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="{% static 'img/portfolio/p5.jpg' %}" alt="">
+								<div class="overlay"></div>
+								<!-- <a href="{% static 'img/portfolio/p5.jpg' %}" class="img-gal"> -->
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								<!-- </a> -->
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">Shopware Onlineshop</a></h4>
+								<p>b-intense, 2018</p>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="col-lg-6 col-md-6 all upcoming">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="{% static 'img/portfolio/p6.jpg' %}" alt="">
+								<div class="overlay"></div>
+								<a href="{% static 'img/portfolio/p6.jpg' %}" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">multiply fowl</a></h4>
+								<p>Animated, portfolio</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 all upcoming following">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="{% static 'img/portfolio/p7.jpg' %}" alt="">
+								<div class="overlay"></div>
+								<a href="{% static 'img/portfolio/p7.jpg' %}" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">green heaven</a></h4>
+								<p>Animated, portfolio</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all following">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="{% static 'img/portfolio/p8.jpg' %}" alt="">
+								<div class="overlay"></div>
+								<a href="{% static 'img/portfolio/p8.jpg' %}" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4>fly male</h4>
+								<p>Animated, portfolio</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all upcoming">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="{% static 'img/portfolio/p9.jpg' %}" alt="">
+								<div class="overlay"></div>
+								<a href="{% static 'img/portfolio/p9.jpg' %}" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">season face</a></h4>
+								<p>Animated, portfolio</p>
+							</div>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Portfolio Area =================-->
+
+	<!--================ Start Testimonial Area =================-->
+	<div class="testimonial_area section_gap_bottom">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2>client say about me</h2>
+						<p>Is give may shall likeness made yielding spirit a itself togeth created after sea is in beast <br>
+							 beginning signs open god you're gathering ithe</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="testi_slider owl-carousel">
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="{% static 'img/testimonials/t1.jpg' %}" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Elite Martin</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="{% static 'img/testimonials/t2.jpg' %}" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Davil Saden</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="{% static 'img/testimonials/t1.jpg' %}" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Elite Martin</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="{% static 'img/testimonials/t2.jpg' %}" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Davil Saden</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="{% static 'img/testimonials/t1.jpg' %}" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Elite Martin</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="{% static 'img/testimonials/t2.jpg' %}" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Davil Saden</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+			</div>
+		</div>
+	</div>
+	<!--================ End Testimonial Area =================-->
+ 
+</main>
+{% endblock %}
