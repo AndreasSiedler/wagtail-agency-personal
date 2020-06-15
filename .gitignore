@@ -5,7 +5,7 @@ venv/
 db.sqlite3
 __pycache__/
 # app/tickets/settings/prod.py
-app/landingpage/debug.log
+app/debug.log
 
 # .env files
 .env
