@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+.venv/
+venv/
+db.sqlite3
+__pycache__/
+# app/tickets/settings/prod.py
+app/landingpage/debug.log
+
+# .env files
+.env
+deploy/postgres/postgres-credentials.yaml
+deploy/python/python-django-secret-key.yaml
