@@ -411,7 +411,8 @@ button:focus {
 .banner_area {
   position: relative;
   z-index: 1;
-  min-height: 485px; }
+  min-height: 485px;
+  background-image: linear-gradient(to right, #854fee 0%, #4458dc 100%), radial-gradient(circle at top left, #4458dc, #854fee);}
   @media (max-width: 1199px) {
     .banner_area {
       min-height: 350px; } }
@@ -420,7 +421,7 @@ button:focus {
     overflow: hidden;
     width: 100%;
     min-height: 485px;
-    background: url(../img/banner/common-banner.png) no-repeat right bottom;
+    /* background: url(../img/banner/common-banner.png) no-repeat right bottom; */
     background-size: 90% 85%;
     width: 98%;
     z-index: 1; }
