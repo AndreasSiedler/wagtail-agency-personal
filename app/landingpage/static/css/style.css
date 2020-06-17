@@ -2764,7 +2764,7 @@ h6 {
     .testimonial_area .owl-carousel .owl-dots {
       display: none !important; } }
 .testimonial_area .owl-carousel .owl-item img {
-  width: auto !important; }
+  width: 130px !important; }
 
 .testi_item {
   padding: 50px 55px;
