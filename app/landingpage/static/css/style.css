@@ -2470,10 +2470,10 @@ h6 {
 /* Start Barand Area css
 ============================================================================================ */
 .brand_area {
-  padding-bottom: 170px; }
+  padding: 80px 0px 80px 0px; }
   @media (max-width: 1199px) {
     .brand_area {
-      padding-bottom: 80px; } }
+      padding: 80px 0px 80px 0px; } }
 
 /* End Barand Area css
 ============================================================================================ */

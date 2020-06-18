@@ -9,10 +9,13 @@
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
                 <div class="banner_content text-center">
-                    <h2>{{ self.title}}</h2>
+					<h2>{{ self.title}}</h2>
+                    <!-- {% if self.subtitle %}
+                        <h4>{{ self.subtitle}}</h4>
+                    {% endif %} -->
                     <div class="page_link">
-                        <a href="index.html">    {{ title}} </a>
-                        <a href="contact.html">{{ self.subtitle}}</a>
+                        <a href="/">Home</a>
+                        <a href="/{{self.slug}}">{{self.title}}</a>
                     </div>
                 </div>
             </div>
@@ -20,35 +23,12 @@
     </section>
     <!--================ End Banner Area =================-->
 
-    <!--================ Start About Us Area =================-->
-	<section class="about_area section_gap">
-		<div class="container">
-			<div class="row justify-content-start align-items-center">
-				<div class="col-lg-5">
-					<div class="about_img">
-						<img class="" src="{% static 'img/about-us.png' %}" alt="">
-					</div>
-				</div>
-
-				<div class="offset-lg-1 col-lg-5 text-center">
-					<img style="border-radius: 50%; width: 150px;" src="{% static 'img/testimonials/t0.jpg' %}" alt="">
-					<div class="main_title mt-4">
-						<h2>Das bin ich.</h2>
-						<p>
-							Mein Name ist Andreas Siedler und ich bin freiberuflicher Fullstack-Entwickler. Schon seit einigen Jahren interessiere ich mich leidenschaftlich für Grafikdesign, Webdesign und Web-Development.
-						</p>
-						<p>
-
-						<!-- <a class="primary_btn" href="#"><span>Showroom</span></a> -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End About Us Area =================-->
-
+    <!--================ Content Area =================-->
 	{% for block in page.content %}
 		{% include_block block %}
 	{% endfor %}
+	<!--================ End Content Area =================-->
+
+
 </main>
 {% endblock %}

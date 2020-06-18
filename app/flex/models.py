@@ -15,6 +15,8 @@ class FlexPage(Page):
         [
             ("title_and_text", blocks.TitleAndTextBlock()),
             ("image_and_text", blocks.ImageAndTextBlock()),
+            ("full_richtext", blocks.RichTextBlock()),
+            ("simple_richtext", blocks.SimpleRichTextBlock()),
         ],
         null=True,
         blank=True
