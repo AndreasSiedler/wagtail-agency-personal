@@ -7,7 +7,7 @@ STATIC_URL = '/static/'
 
 SECRET_KEY = 'kjfasjijlkj242345löjk2h4jh32jh542jk2lj4hx'
 
-ALLOWED_HOSTS = ['clickventure.at', 'www.clickventure.at', '64.227.113.104']
+ALLOWED_HOSTS = ['siedler.co', 'www.siedler.co', '64.227.113.104']
 
 try:
     from .local import *

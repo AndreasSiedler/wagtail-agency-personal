@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose -f prod.yml)" ]; then
   exit 1
 fi
 
-domains=(clickventure.at www.clickventure.at)
+domains=(siedler.co www.siedler.co)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="andreas.siedler@gmail.com" # Adding a valid address is strongly recommended
