@@ -191,11 +191,6 @@ button:focus {
     border: 2px solid transparent;
     color: #222222;
     box-shadow: none; }
-    .primary_btn.tr-bg:hover {
-      background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
-      border: double 2px transparent;
-      color: #ffffff;
-      box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3); }
   .primary_btn:hover {
     background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #4458dc, #854fee);
     border: 2px solid #854fee;
@@ -226,7 +221,7 @@ button:focus {
     border-radius: 0px;
     width: 100%; }
     .header_area .navbar .logo_h img {
-      height: 45px;
+      height: 70px;
       filter: brightness(1000%);
     }
     .header_area.navbar_fixed .logo_h img {
@@ -314,8 +309,7 @@ button:focus {
     top: -70px;
     left: 0;
     right: 0;
-    background: #ffffff;
-    background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
+    background: #000;
     transform: translateY(70px);
     transition: transform 500ms ease, background 500ms ease;
     -webkit-transition: transform 500ms ease, background 500ms ease;
