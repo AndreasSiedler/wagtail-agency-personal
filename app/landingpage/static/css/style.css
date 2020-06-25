@@ -28,7 +28,7 @@ Author E-mail: naimlasker@gmail.com
 body {
   line-height: 26px;
   font-size: 15px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: 400;
   color: #777777;
   background: url(../img/body-bg.png) no-repeat center; }
@@ -39,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rubik", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: 500;
   color: #000000; }
 
@@ -169,7 +169,7 @@ button:focus {
   display: inline-block;
   color: #fff;
   letter-spacing: 0px;
-  font-family: "Rubik", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 46px;
@@ -230,7 +230,7 @@ button:focus {
     .header_area .navbar .nav .nav-item {
       margin-right: 45px; }
       .header_area .navbar .nav .nav-item .nav-link {
-        font: 500 14px/100px "Rubik", sans-serif;
+        font: 500 14px/100px "Roboto Mono", monospace;
         text-transform: uppercase;
         color: #fff;
         padding: 0px;
@@ -436,7 +436,7 @@ button:focus {
       .banner_area .banner_inner .banner_content h2 {
         color: #fff;
         font-size: 50px;
-        font-family: "Rubik", sans-serif;
+        font-family: "Roboto Mono", monospace;
         margin-bottom: 10px;
         text-transform: uppercase;
         font-weight: 700; }
@@ -446,7 +446,7 @@ button:focus {
       .banner_area .banner_inner .banner_content .page_link a {
         font-size: 14px;
         color: #fff;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto Mono", monospace;
         margin-right: 20px;
         position: relative; }
         .banner_area .banner_inner .banner_content .page_link a:before {
@@ -478,7 +478,7 @@ button:focus {
   padding: 0px 32px;
   font-size: 13px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
   color: #000000;
   line-height: 34px;
   display: inline-block; }
@@ -494,7 +494,7 @@ button:focus {
   line-height: 40px;
   padding: 0px 28px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: 500;
   text-transform: uppercase;
   -webkit-transition: all 0.4s ease 0s;
@@ -552,7 +552,7 @@ button:focus {
     padding: 30px 35px 40px 30px; }
     .causes_item .causes_text h4 {
       color: #000000;
-      font-family: "Roboto", sans-serif;
+      font-family: "Roboto Mono", monospace;
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 15px;
@@ -573,7 +573,7 @@ button:focus {
     line-height: 50px;
     background: #4458dc;
     color: #fff;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Mono", monospace;
     font-size: 14px;
     font-weight: 500; }
     .causes_item .causes_bottom a + a {
@@ -1187,7 +1187,7 @@ button:focus {
     line-height: 26px;
     color: #999;
     border: 1px solid #eeeeee;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Mono", monospace;
     border-radius: 0px;
     padding-left: 20px; }
     .contact_form .form-group .form-control:focus {
@@ -1237,8 +1237,8 @@ button:focus {
       text-align: center;
       color: #4458dc;
       padding-bottom: 10px;
-      font-family: "Roboto", sans-serif; }
-    .modal-message .modal-dialog .modal-content .modal-header p {
+      font-family: "Roboto Mono", monospace; }
+      .modal-message .modal-dialog .modal-content .modal-header p {
       display: block; }
 
 /* End Contact Success and error Area css
@@ -2575,7 +2575,7 @@ h6 {
       align-items: center; } }
   .client-info .lage {
     color: #854fee;
-    font-family: "Rubik", sans-serif;
+    font-family: "Roboto Mono", monospace;
     font-size: 100px;
     font-weight: 700;
     line-height: 85px;
@@ -2584,7 +2584,7 @@ h6 {
   .client-info .smll {
     text-align: left;
     color: #000000;
-    font-family: "Rubik", sans-serif;
+    font-family: "Roboto Mono", monospace;
     font-size: 20px;
     margin-left: 20px; }
 
@@ -2721,7 +2721,7 @@ h6 {
     font-weight: normal;
     font-size: 14px; }
     .portfolio_details_inner .portfolio_right_text .list li span {
-      font-family: "Rubik", sans-serif;
+      font-family: "Roboto Mono", monospace;
       color: #000000;
       font-size: 16px;
       font-weight: 500;
@@ -2849,7 +2849,7 @@ h6 {
     border-radius: 5px;
     line-height: 48px;
     font-size: 14px;
-    font-family: "Rubik", sans-serif;
+    font-family: "Roboto Mono", monospace;
     padding: 0px 38px;
     cursor: pointer; }
     @media (max-width: 767px) {
@@ -3090,8 +3090,8 @@ h6 {
 
   .home_banner_area .banner_inner .banner_content {
     margin-top: 0px; }
-    .home_banner_area .banner_inner .banner_content .primary_btn {
-      display: none; }
+    /* .home_banner_area .banner_inner .banner_content .primary_btn {
+      display: none; } */
 
   /* Blog Page Area css
   ============================================================================================ */
