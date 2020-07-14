@@ -197,6 +197,7 @@ LOGGING = {
 }
 
 # Compressor SETTINGS
+COMPRESS_OFFLINE = True
 GZIP_CONTENT_TYPES = (
     'text/css',
     'application/javascript',
