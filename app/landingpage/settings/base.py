@@ -195,3 +195,6 @@ LOGGING = {
         },
     },
 }
+
+# Compressor Settings
+COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
