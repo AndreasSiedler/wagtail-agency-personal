@@ -8,6 +8,7 @@ __pycache__/
 # app/tickets/settings/prod.py
 app/debug.log
 app/media
+app/static
 
 # .env files
 .env

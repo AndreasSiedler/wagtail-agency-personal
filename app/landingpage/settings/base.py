@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'django.middleware.gzip.GZipMiddleware',
+    # 'django.middleware.gzip.GZipMiddleware',
 
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
@@ -196,5 +196,22 @@ LOGGING = {
     },
 }
 
-# Compressor Settings
-COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
+# Compressor SETTINGS
+GZIP_CONTENT_TYPES = (
+    'text/css',
+    'application/javascript',
+    'application/x-javascript',
+    'text/javascript'
+)
+
+COMPRESS_ENABLED = True
+COMPRESS_URL = STATIC_URL
+COMPRESS_CSS_FILTERS = [
+    'compressor.filters.css_default.CssAbsoluteFilter',
+    'compressor.filters.cssmin.CSSMinFilter'
+]
+COMPRESS_JS_FILTERS = [
+    'compressor.filters.jsmin.JSMinFilter',
+]
+COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage' 
+
