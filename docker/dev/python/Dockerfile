@@ -1,5 +1,4 @@
-FROM python:3.6.10-slim-stretch
-MAINTAINER ckreuzberger@localhost
+FROM python:3.6
 
 COPY ./docker/dev/python/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh

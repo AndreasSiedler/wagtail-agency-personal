@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
     'widget_tweaks',
+    'compressor',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -146,6 +147,8 @@ USE_TZ = True
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
 ]
 
 STATICFILES_DIRS = [

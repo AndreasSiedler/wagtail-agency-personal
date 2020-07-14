@@ -1,4 +1,5 @@
 {% load static wagtailuserbar %}
+{% load compress %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -19,14 +20,16 @@
 
         {# Global stylesheets #}
         <!-- Bootstrap CSS -->
+        {% compress css %}
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        {% endcompress %}
         <!-- <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}"> -->
         <!-- <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"> -->
-        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
         <!-- <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}"> -->
         <!-- <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}"> -->
         <!-- main css -->
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
@@ -147,22 +150,24 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!--================End Footer Area =================-->
 
         {# Global javascript #}
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        {% compress js  %}
         <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-        <!-- <script src="{% static 'js/popper.js' %}"></script> -->
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        <!-- <script src="{% static 'js/stellar.js' %}"></script> -->
-        <!-- <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script> -->
         <script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
-        <!-- <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script> -->
-        <!-- <script src="{% static 'vendors/isotope/isotope-min.js' %}"></script> -->
         <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
         <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'js/theme.js' %}"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!-- <script src="{% static 'js/popper.js' %}"></script> -->
+        <!-- <script src="{% static 'js/stellar.js' %}"></script> -->
+        <!-- <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script> -->
+        <!-- <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script> -->
+        <!-- <script src="{% static 'vendors/isotope/isotope-min.js' %}"></script> -->
         <!-- <script src="{% static 'js/mail-script.js' %}"></script> -->
         <!--gmaps Js-->
         <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script> -->
         <!-- <script src="{% static 'js/gmaps.min.js' %}"></script> -->
-        <script src="{% static 'js/theme.js' %}"></script>
+        {% endcompress %}
 
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
