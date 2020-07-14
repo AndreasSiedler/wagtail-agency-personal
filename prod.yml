@@ -13,7 +13,7 @@ services:
       - DJANGO_SETTINGS_MODULE=landingpage.settings.prod
       - PYTHONUNBUFFERED=1
     volumes:
-      - static_files:/static_files
+      - static_files:/app/static
       - media_files:/app/media
     ports:
       - 8000:8000
