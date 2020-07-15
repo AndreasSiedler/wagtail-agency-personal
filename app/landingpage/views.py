@@ -7,8 +7,6 @@ def robots_txt(request):
     lines = [
         "User-Agent: *",
         "Disallow: /admin/",
-        "Disallow: /private/",
-        "Disallow: /junk/",
-        f"Sitemap: {request.scheme}://{request.META['HTTP_HOST']}/sitemap.xml",
+        "Sitemap: /sitemap.xml",
     ]
     return HttpResponse("\n".join(lines), content_type="text/plain")
