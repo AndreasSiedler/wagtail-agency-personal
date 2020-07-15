@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'taggit',
     'widget_tweaks',
     'compressor',
+    'wagtailmetadata',
 
     'django.contrib.admin',
     'django.contrib.auth',

@@ -6,3 +6,4 @@ celery>=4.2,<4.3
 django-environ>=0.4.5,<0.5
 whitenoise>=5.0.1,<5.1
 django_compressor>=2.4,<2.5
+wagtail-metadata>=3.2.0,<3.3
