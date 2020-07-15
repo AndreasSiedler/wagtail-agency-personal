@@ -5,9 +5,11 @@ from wagtail.core.models import Page
 from wagtail.core.fields import StreamField
 
 from streams import blocks
+from wagtailmetadata.models import MetadataPageMixin
+
 
 # Create your models here.
-class FlexPage(Page):
+class FlexPage(MetadataPageMixin, Page):
 
     template = "flex/flex_page.html"
 
