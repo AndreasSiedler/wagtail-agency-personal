@@ -1,20 +1,10 @@
-{% load static compress wagtailuserbar %}
+{% load static compress wagtailuserbar wagtailmetadata_tags %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>
-            {% block title %}
-                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
-            {% endblock %}
-            {% block title_suffix %}
-                {% with self.get_site.site_name as site_name %}
-                    {% if site_name %}- {{ site_name }}{% endif %}
-                {% endwith %}
-            {% endblock %}
-        </title>
-        <meta name="description" content="" />
+        {% meta_tags %}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
@@ -24,11 +14,6 @@
         <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         {% endcompress %}
-        <!-- <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}"> -->
-        <!-- <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"> -->
-        <!-- <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}"> -->
-        <!-- <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}"> -->
-        <!-- main css -->
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}

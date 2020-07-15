@@ -3,8 +3,10 @@ from django.db import models
 from wagtail.core.models import Page
 from wagtail.admin.edit_handlers import FieldPanel
 
+from wagtailmetadata.models import MetadataPageMixin
 
-class HomePage(Page):
+
+class HomePage(MetadataPageMixin, Page):
     """Home page model"""
     
     templates = "home/home_page.html"
