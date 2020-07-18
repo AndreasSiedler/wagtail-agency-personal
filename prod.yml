@@ -1,8 +1,6 @@
 version: '3'
 volumes:
   pgdata:
-  static_files:
-  media_files:
 services:
   python:
     build:
@@ -12,8 +10,8 @@ services:
       - DJANGO_SETTINGS_MODULE=core.settings.prod
       - PYTHONUNBUFFERED=1
     volumes:
-      - static_files:/app/static
-      - media_files:/app/media
+      - /statics/wagtail-agency-personal/static_files:/app/static
+      - /statics/wagtail-agency-personal/media_files:/app/media
     ports:
       - 8000:8000
     command: gunicorn -w 4 core.wsgi -b 0.0.0.0:8000
@@ -25,25 +23,3 @@ services:
       POSTGRES_PASS: tickets
     volumes:
       - pgdata:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
-  nginx:
-    image: nginx:1.15-alpine
-    restart: unless-stopped
-    volumes:
-      - static_files:/static_files
-      - ./docker/prod/nginx/app.conf:/etc/nginx/conf.d/app.conf
-      - ./docker/prod/certbot/conf:/etc/letsencrypt
-      - ./docker/prod/certbot/www:/var/www/certbot
-      - media_files:/media
-    ports:
-      - "80:80"
-      - "443:443"
-    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
-  certbot:
-    image: certbot/certbot
-    restart: unless-stopped
-    volumes:
-      - ./docker/prod/certbot/conf:/etc/letsencrypt
-      - ./docker/prod/certbot/www:/var/www/certbot
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
