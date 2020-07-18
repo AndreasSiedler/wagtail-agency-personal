@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
         {% endcompress %}
 
         {% block extra_css %}
@@ -39,7 +40,8 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                             <ul class="nav navbar-nav menu_nav justify-content-end">
-                                <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                                <li class="nav-item active my-auto"><a class="nav-link py-3" href="/contact">Kontakt</a></li>
+                                <li class="nav-item my-auto"><a class="btn btn-outline-light py-3 my-3" href="/start-project"><span>Projekt starten</span></a></li>
                                 <!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> -->
                                 <!-- <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li> -->
                                 <!-- <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li> -->
@@ -60,7 +62,6 @@
                                     </ul>
                                 </li> -->
                                 <!-- <li class="nav-item"><a class="nav-link" href="/about">Über mich</a></li> -->
-                                <li class="nav-item my-auto"><a class="primary_btn tr-bg" href="/contact"><span>Get in Touch</span></a></li>
                             </ul>
                         </div>
                     </div>
