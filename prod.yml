@@ -1,6 +1,8 @@
 version: '3'
+
 volumes:
   pgdata:
+
 services:
   python:
     build:
@@ -23,3 +25,8 @@ services:
       POSTGRES_PASS: tickets
     volumes:
       - pgdata:/var/lib/postgresql/data
+
+networks:
+  default:
+    external:
+      name: myNetwork
