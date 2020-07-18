@@ -9,10 +9,10 @@
     <div class="banner_inner d-flex align-items-center">
         <div class="container">
             <div class="banner_content text-center">
-                <h2>Contact Me</h2>
+                <h2>{{ page.title }}</h2>
                 <div class="page_link">
                     <a href="/">Home</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/contact">{{ page.title }}</a>
                 </div>
             </div>
         </div>
@@ -36,91 +36,51 @@
                         <h6><a href="#">+43 676 945 75 66</a></h6>
                         <p>Mon to Fri 9am to 6 pm</p>
                     </div>
-                    <!-- <div class="info_item">
-                        <i class="lnr lnr-envelope"></i>
-                        <h6><a href="#">support@colorlib.com</a></h6>
-                        <p>Send us your query anytime!</p>
-                    </div> -->
+
                 </div>
             </div>
             <div class="col-lg-9">
-                <!-- <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-12 text-right">
-                        <button type="submit" value="submit" class="primary_btn">
-                            <span>Send Message</span>
-                        </button>
-                    </div>
-                </form> -->
-                <!-- <form class="row contact_form" action="{% pageurl page %}" method="POST">
-                    {% csrf_token %}
-                    {{ form.as_ul }}
-            
-                    <input type="submit">
-            
-            
-                </form> -->
                 <form action="{% pageurl page %}" method="POST">
                     {% csrf_token %}
-                
+
                     {% if form.non_field_errors %}
-                      <div class="alert alert-danger" role="alert">
+                    <div class="alert alert-danger" role="alert">
                         {% for error in form.non_field_errors %}
-                          {{ error }}
+                        {{ error }}
                         {% endfor %}
-                      </div>
+                    </div>
                     {% endif %}
-                
+                    
+
                     {% for field in form.visible_fields %}
-                      <div class="form-group">
-                        {{ field.label_tag }}
+
+                    {% if field.field.widget.input_type == "checkbox" or field.field.widget.input_type == "radio" %}
+                    <div class="form-group mb-4">
+                        <h4>{{ field.label_tag }}</h4>
+                        <div>
+                            {% for choice in field %}
+                            {{ choice }}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% elif field.field.widget.input_type == "select"  %}
+                    <div class="form-group mb-4">
+                        <h4>{{ field.label_tag }}</h4>
+                        {% render_field field %}
+                    </div>
+                    {% else %}
+                    <div class="form-group mb-4">
+                        <h4>{{ field.label_tag }}</h4>
                         {% render_field field class+="form-control" %}
-                      </div>
+                    </div>
+                    {% endif %}
                     {% endfor %}
-                
-                    <button type="submit" class="primary_btn tr-bg" ><span>Send Message</span></button>
+
+                    <button type="submit" class="primary_btn tr-bg"><span>Send Message</span></button>
                 </form>
             </div>
         </div>
-        <!-- <div id="mapBox" class="mapBox" 
-            data-lat="40.701083" 
-            data-lon="-74.1522848" 
-            data-zoom="13" 
-            data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
-            data-mlat="40.701083"
-            data-mlon="-74.1522848">
-        </div> -->
     </div>
 </section>
-<!--================Contact Area =================-->
-
-
-    <!-- <h1>{{ page.title }}</h1>
-    <p>
-        {{ self.intro|richtext }}
-    </p>
-    <form action="{% pageurl page %}" method="POST">
-        {% csrf_token %}
-        {{ form.as_ul }}
-
-        <input type="submit">
-
-
-    </form> -->
 
 {% endblock %}

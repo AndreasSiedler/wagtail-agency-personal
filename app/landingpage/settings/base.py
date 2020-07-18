@@ -207,7 +207,7 @@ GZIP_CONTENT_TYPES = (
     'text/javascript'
 )
 
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = False
 COMPRESS_URL = STATIC_URL
 COMPRESS_CSS_FILTERS = [
     'compressor.filters.css_default.CssAbsoluteFilter',
