@@ -5,7 +5,6 @@ volumes:
   media_files:
 services:
   python:
-    # image: python:3.4
     build:
       context: .
       dockerfile: docker/prod/python/Dockerfile
@@ -33,9 +32,9 @@ services:
     restart: unless-stopped
     volumes:
       - static_files:/static_files
-      - ./data/nginx:/etc/nginx/conf.d
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
+      - ./docker/prod/nginx/app.conf:/etc/nginx/conf.d/app.conf
+      - ./docker/prod/certbot/conf:/etc/letsencrypt
+      - ./docker/prod/certbot/www:/var/www/certbot
       - media_files:/media
     ports:
       - "80:80"
@@ -45,6 +44,6 @@ services:
     image: certbot/certbot
     restart: unless-stopped
     volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
+      - ./docker/prod/certbot/conf:/etc/letsencrypt
+      - ./docker/prod/certbot/www:/var/www/certbot
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
