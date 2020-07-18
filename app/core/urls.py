@@ -10,7 +10,7 @@ from wagtail.documents import urls as wagtaildocs_urls
 from search import views as search_views
 from wagtail.contrib.sitemaps.views import sitemap
 
-from landingpage.views import robots_txt
+from core.views import robots_txt
 
 
 urlpatterns = [

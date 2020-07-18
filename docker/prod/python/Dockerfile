@@ -17,4 +17,4 @@ RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD ["gunicorn", "landingpage.wsgi", "-b 0.0.0.0:8000"]
+CMD ["gunicorn", "core.wsgi", "-b 0.0.0.0:8000"]
