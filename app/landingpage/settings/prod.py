@@ -1,6 +1,7 @@
 from .base import *
 
 DEBUG = False
+COMPRESS_ENABLED = True
 
 SECRET_KEY = 'kjfasjijlkj242345löjk2h4jh32jh542jk2lj4hx'
 
