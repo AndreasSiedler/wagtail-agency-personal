@@ -10,14 +10,14 @@ services:
       context: .
       dockerfile: docker/prod/python/Dockerfile
     environment:
-      - DJANGO_SETTINGS_MODULE=landingpage.settings.prod
+      - DJANGO_SETTINGS_MODULE=core.settings.prod
       - PYTHONUNBUFFERED=1
     volumes:
       - static_files:/app/static
       - media_files:/app/media
     ports:
       - 8000:8000
-    command: gunicorn -w 4 landingpage.wsgi -b 0.0.0.0:8000
+    command: gunicorn -w 4 core.wsgi -b 0.0.0.0:8000
   postgres:
     image: postgres:10.3
     environment:
