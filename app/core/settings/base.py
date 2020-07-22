@@ -27,8 +27,6 @@ INSTALLED_APPS = [
     'home',
     'search',
     'contact',
-    'flex',
-    'streams',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -65,7 +63,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    # 'django.middleware.gzip.GZipMiddleware',
 
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
@@ -107,8 +104,6 @@ DATABASES = {
     }
 }
 
-# CELERY_BROKER_URL = "amqp://rabbitmq"
-CELERY_BROKER_URL = 'amqp://rabbitmq'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -177,26 +172,6 @@ WAGTAIL_SITE_NAME = "core"
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
 
-
-## Logging configuration
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'ERROR',
-            'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'debug.log'),
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-    },
-}
 
 # Compressor SETTINGS
 COMPRESS_OFFLINE = True
