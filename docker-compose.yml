@@ -1,27 +1,29 @@
 version: '3'
+
 volumes:
-  pgdata:
+  db:
+
 services:
-  python: &python
+  python:
     build:
       context: .
-      dockerfile: docker/dev/python/Dockerfile
+      dockerfile: docker/prod/python/Dockerfile
     environment:
-      PYTHONUNBUFFERED: 1
+      - DJANGO_SETTINGS_MODULE=core.settings.production
+      - PYTHONUNBUFFERED=1
     volumes:
+      - /statics/wagtail-cms/static_files:/app/static
+      - /statics/wagtail-cms/media_files:/app/media
+      - db:/app/db
       - ./app:/app
     ports:
-      - 8000:8000
-    command: python manage.py runserver 0.0.0.0:8000
-    depends_on:
-      - postgres
-  postgres:
-    image: postgres:10.3
-    environment:
-      POSTGRES_USER: tickets
-      POSTGRES_DB: tickets
-      POSTGRES_PASS: tickets
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
+      - 7000:8000
+    command: gunicorn -w 4 core.wsgi -b 0.0.0.0:8000
+    networks:
+      static-network:
+        ipv4_address: 172.20.128.2
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
