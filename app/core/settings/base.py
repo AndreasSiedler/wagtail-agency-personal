@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'compressor',
     'wagtailmetadata',
     'django.contrib.sitemaps',
+    'crispy_forms',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -167,3 +168,6 @@ WAGTAIL_SITE_NAME = "core"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
+
+# Crispy Settings
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

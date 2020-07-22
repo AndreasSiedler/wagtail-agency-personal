@@ -1,7 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags compress %}
+
+{% block extra_css %}
+	<link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+	<script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+	<script src="{% static 'js/theme.js' %}"></script>
+{% endblock %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -353,74 +363,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="col-lg-6 col-md-6 all upcoming">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{% static 'img/portfolio/p6.jpg' %}" alt="">
-								<div class="overlay"></div>
-								<a href="{% static 'img/portfolio/p6.jpg' %}" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">multiply fowl</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 all upcoming following">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{% static 'img/portfolio/p7.jpg' %}" alt="">
-								<div class="overlay"></div>
-								<a href="{% static 'img/portfolio/p7.jpg' %}" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">green heaven</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all following">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{% static 'img/portfolio/p8.jpg' %}" alt="">
-								<div class="overlay"></div>
-								<a href="{% static 'img/portfolio/p8.jpg' %}" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4>fly male</h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all upcoming">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{% static 'img/portfolio/p9.jpg' %}" alt="">
-								<div class="overlay"></div>
-								<a href="{% static 'img/portfolio/p9.jpg' %}" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">season face</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -472,58 +414,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="testi_item">
-        				<div class="row">
-        					<div class="col-lg-4">
-        						<img src="{% static 'img/testimonials/t1.jpg' %}" alt="">
-        					</div>
-        					<div class="col-lg-8">
-        						<div class="testi_text">
-        							<h4>Elite Martin</h4>
-									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="testi_item">
-        				<div class="row">
-        					<div class="col-lg-4">
-        						<img src="{% static 'img/testimonials/t2.jpg' %}" alt="">
-        					</div>
-        					<div class="col-lg-8">
-        						<div class="testi_text">
-        							<h4>Davil Saden</h4>
-									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="testi_item">
-        				<div class="row">
-        					<div class="col-lg-4">
-        						<img src="{% static 'img/testimonials/t1.jpg' %}" alt="">
-        					</div>
-        					<div class="col-lg-8">
-        						<div class="testi_text">
-        							<h4>Elite Martin</h4>
-									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="testi_item">
-        				<div class="row">
-        					<div class="col-lg-4">
-        						<img src="{% static 'img/testimonials/t2.jpg' %}" alt="">
-        					</div>
-        					<div class="col-lg-8">
-        						<div class="testi_text">
-        							<h4>Davil Saden</h4>
-									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
-        						</div>
-        					</div>
-        				</div>
-        			</div> -->
 				</div>
 			</div>
 		</div>
