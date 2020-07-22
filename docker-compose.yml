@@ -21,9 +21,9 @@ services:
     command: gunicorn -w 4 core.wsgi -b 0.0.0.0:8000
     networks:
       static-network:
-        ipv4_address: 172.20.128.2
+        ipv4_address: 172.15.128.2
 networks:
   static-network:
     ipam:
       config:
-        - subnet: 172.20.0.0/16
+        - subnet: 172.15.0.0/16
