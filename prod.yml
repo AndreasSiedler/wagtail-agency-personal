@@ -17,6 +17,9 @@ services:
     ports:
       - 8000:8000
     command: gunicorn -w 4 core.wsgi -b 0.0.0.0:8000
+    networks:
+      static-network:
+        ipv4_address: 172.15.128.2
   postgres:
     image: postgres:10.3
     environment:
@@ -25,8 +28,16 @@ services:
       POSTGRES_PASS: tickets
     volumes:
       - pgdata:/var/lib/postgresql/data
-
+    networks:
+      static-network:
+        ipv4_address: 172.15.128.3
 networks:
-  default:
-    external:
-      name: myNetwork
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.15.0.0/16
+
+# networks:
+#   default:
+#     external:
+#       name: myNetwork
