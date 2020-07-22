@@ -42,26 +42,6 @@
                             <ul class="nav navbar-nav menu_nav justify-content-end">
                                 <li class="nav-item active my-auto"><a class="nav-link py-3" href="/contact">Kontakt</a></li>
                                 <li class="nav-item my-auto"><a class="btn btn-outline-light py-3 my-3" href="/start-project"><span>Projekt starten</span></a></li>
-                                <!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> -->
-                                <!-- <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li> -->
-                                <!-- <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li> -->
-                                <!-- <li class="nav-item submenu dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">Pages</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio Details</a></li>
-                                    </ul>
-                                </li> -->
-                                <!-- <li class="nav-item submenu dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">Blog</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-                                    </ul>
-                                </li> -->
-                                <!-- <li class="nav-item"><a class="nav-link" href="/about">Über mich</a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -70,9 +50,11 @@
         </header>
         <!--================ End Header Area =================-->
         
+        
         <!-- Main content -->
         {% block content %} {% endblock %}
         <!--/ Maincontent -->
+
 
         <!--================ Start Newsletter Area =================-->
         <section class="newsletter_area">
@@ -108,18 +90,12 @@
 				<div class="col-lg-12">
 					<div class="footer_top flex-column">
 						<div class="footer_logo">
-							<!-- <a href="#">
-								<img src="{% static 'img/logo.png' %}" alt="">
-							</a> -->
                             <h4 class="mb-4">Need a Fullstack Developer from Vienna? <br>Let's build something.</h4>
                             <a class="primary_btn tr-bg" href="/contact"><span>Get in Touch</span></a>
 
 						</div>
 						<div class="footer_social">
 							<a href="https://github.com/AndreasSiedler" target="_blank"><i class="fa fa-github"></i></a>
-							<!-- <a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a> -->
 						</div>
 					</div>
 				</div>
@@ -142,16 +118,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
         <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
         <script src="{% static 'js/theme.js' %}"></script>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <!-- <script src="{% static 'js/popper.js' %}"></script> -->
-        <!-- <script src="{% static 'js/stellar.js' %}"></script> -->
-        <!-- <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script> -->
-        <!-- <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script> -->
-        <!-- <script src="{% static 'vendors/isotope/isotope-min.js' %}"></script> -->
-        <!-- <script src="{% static 'js/mail-script.js' %}"></script> -->
-        <!--gmaps Js-->
-        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script> -->
-        <!-- <script src="{% static 'js/gmaps.min.js' %}"></script> -->
         {% endcompress %}
 
         {% block extra_js %}
