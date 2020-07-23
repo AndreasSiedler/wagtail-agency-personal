@@ -6,7 +6,7 @@ from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
-from core.views import robots_txt
+from core.views import robots_txt, notfound_page
 
 from search import views as search_views
 from wagtail.contrib.sitemaps.views import sitemap
@@ -35,6 +35,7 @@ urlpatterns = urlpatterns + [
     # For anything not caught by a more specific rule above, hand over to
     # Wagtail's page serving mechanism. This should be the last pattern in
     # the list:
+    url(r'^404', notfound_page),
     url(r'^sitemap\.xml$', sitemap),
     url(r'^robots\.txt$', robots_txt, name='robots'),
     url(r"", include(wagtail_urls)),
