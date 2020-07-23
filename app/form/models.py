@@ -17,11 +17,13 @@ class FormField(AbstractFormField):
 class FormPage(MetadataPageMixin, AbstractEmailForm):
     intro = RichTextField(blank=True)
     thank_you_text = RichTextField(blank=True)
+    button_text = models.CharField(max_length=50, default='Anfrage senden')
 
     content_panels = AbstractEmailForm.content_panels + [
         FieldPanel('intro', classname="full"),
         InlinePanel('form_fields', label="Form fields"),
         FieldPanel('thank_you_text', classname="full"),
+        FieldPanel('button_text', classname="full"),
         MultiFieldPanel([
             FieldRowPanel([
                 FieldPanel('from_address', classname="col6"),

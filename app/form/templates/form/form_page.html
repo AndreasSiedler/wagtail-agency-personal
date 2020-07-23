@@ -43,12 +43,13 @@
                 </div>
             </div>
             <div class="col-lg-9">
-                <h1>{{ page.title }}</h1>
+                {% comment %} <h1>{{ page.title }}</h1> {% endcomment %}
                 {{ page.intro|richtext }}
                 <form action="{% pageurl page %}" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <input class="primary_btn tr-bg" type="submit">
+                    {% comment %} <input class="primary_btn tr-bg" type="submit"> {% endcomment %}
+                    <button class="primary_btn tr-bg" type="submit">{{ page.button_text }}</button>
                 </form>
             </div>
         </div>
