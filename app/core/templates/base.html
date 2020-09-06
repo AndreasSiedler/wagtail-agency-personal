@@ -15,6 +15,8 @@
         {% compress css %}
             <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
             <link rel="stylesheet" href="{% static 'css/style.css' %}">
+              <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
             {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
             {% endblock %}
@@ -102,6 +104,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="row footer_bottom justify-content-center">
 				<p class="col-lg-8 col-sm-12 footer-text">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -118,11 +121,30 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             <script src="{% static 'js/bootstrap.min.js' %}"></script>
             <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
             <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+              <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+            <script>
+            $(document).bind("mousemove", function(e) {
+                console.log(e.offsetX, e.offsetY);
+            });
+            $(document).bind("mouseleave", function(e) {
+                if (e.pageY - $(window).scrollTop() <= 1) {    
+                    $('#BeforeYouLeaveDiv').show();
+                        {% comment %} $( "#dialog" ).dialog(); {% endcomment %}
+                        var oldURL = document.referrer;
+                        alert(oldURL);
+
+                }
+            });
+            </script>
             {% block extra_js %}
                 {# Override this in templates to add extra javascript #}
             {% endblock %}
         {% endcompress %}
-
+                <div id="dialog" title="Basic dialog">
+  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
 
     </body>
+
 </html>
