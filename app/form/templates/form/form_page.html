@@ -1,5 +1,4 @@
-{% extends "base.html" %}
-
+{% extends "flex_base.html" %}
 {% load wagtailcore_tags crispy_forms_tags %}
 
 {% block body_class %}template-formpage{% endblock %}
@@ -7,21 +6,6 @@
 
 {% block content %}
 
-<!--================ Start Banner Area =================-->
-<section class="banner_area">
-    <div class="banner_inner d-flex align-items-center">
-        <div class="container">
-            <div class="banner_content text-center">
-                <h2>{{ page.title }}</h2>
-                <div class="page_link">
-                    <a href="/">Home</a>
-                    <a href="/contact">{{ page.title }}</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================ End Banner Area =================-->
 
 <!--================Contact Area =================-->
 <section class="contact_area section_gap">

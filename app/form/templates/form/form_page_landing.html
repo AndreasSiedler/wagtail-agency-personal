@@ -1,6 +1,41 @@
-{% extends 'base.html' %}
+{% extends "flex_base.html" %}
 
+{% load wagtailcore_tags crispy_forms_tags %}
+
+{% block body_class %}template-formpage{% endblock %}
 
 {% block content %}
-    <h1>Danke</h1>
+<!--================Contact Area =================-->
+<section class="contact_area section_gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="contact_info">
+                    <div class="info_item">
+                        <i class="lnr lnr-home"></i>
+                        <h6>Wien, Österreich</h6>
+                        <p>Vienna, Messecarree</p>
+                    </div>
+                    <div class="info_item">
+                        <i class="lnr lnr-phone-handset"></i>
+                        <h6><a href="#">+43 676 945 75 66</a></h6>
+                        <p>Mon to Fri 9am to 6 pm</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-9">
+                {% comment %} <h1>{{ page.title }}</h1> {% endcomment %}
+                {{ page.intro|richtext }}
+                <form action="{% pageurl page %}" method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    {% comment %} <input class="primary_btn tr-bg" type="submit"> {% endcomment %}
+                    <button class="primary_btn tr-bg" type="submit">{{ page.button_text }}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
