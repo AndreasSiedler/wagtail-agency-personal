@@ -4,7 +4,6 @@ wagtail-metadata==3.3.*
 wagtailmenus==3.0.*
 django-widget-tweaks==1.4.*
 django-crispy-forms==1.10.*
-
 django_compressor==2.4.*
 wagtail-color-panel==1.1.*
 python-dotenv==0.15.*
