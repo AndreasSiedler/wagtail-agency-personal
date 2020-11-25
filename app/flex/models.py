@@ -1,57 +1,42 @@
-from django.db import models
-from django import forms
+""" Flex Page """
 
+from wagtail.admin.edit_handlers import StreamFieldPanel, RichTextFieldPanel
 from wagtail.core.models import Page
-from wagtail.core.fields import StreamField
-from wagtail.admin.edit_handlers import StreamFieldPanel, FieldPanel
+from wagtail.core.fields import StreamField, RichTextField
+from wagtail.api import APIField
 
-from wagtail.images.blocks import ImageChooserBlock
-from wagtail.core import blocks
-from wagtail.embeds.blocks import EmbedBlock
+from .blocks import (LogoCloudBlock, PortfolioSectionBlock, TestimonialSectionBlock,
+                     HeroSectionBlock, ContentSectionBlock, FeatureSectionBlock)
 
-from wagtailmetadata.models import MetadataPageMixin
 
 # Create your models here.
-class FlexPage(MetadataPageMixin, Page):
-    intro = models.CharField(max_length=250, blank=True)
-    body = StreamField([
-        ('heading', blocks.CharBlock(classname="full title")),
-        ('paragraph', blocks.RichTextBlock()),
-        ('image', ImageChooserBlock()),
-        ('row', blocks.StructBlock([
-            ('layout', blocks.MultipleChoiceBlock(choices=[
-                ("test", "test2"),
-                ("test", "test2"),
-                ("test", "test2"),
-                ("test", "test2"),
-                ("test", "test2"),
-                ("test", "test2"),
-                ("test", "test2"),
-                ("test", "test2"),
-                ("test", "test2"),
-                ("test", "test2"),
-                ("test", "test2"),
-                ("test", "test2"),
-            ], widget=forms.SelectMultiple)),
-            ('carousel', blocks.StreamBlock(
-                [
-                    # ('columns', blocks.ListBlock([
-                    #     ('column', blocks.CharBlock()),
-                    # ])),
-                    ('image', ImageChooserBlock()),
-                    ('quotation', blocks.StructBlock([
-                        ('text', blocks.TextBlock()),
-                        ('author', blocks.CharBlock()),
-                    ])),
-                    ('video', EmbedBlock()),
-                ],
-                icon='cogs'
-            ))
-        ], icon='user')),
 
-    ])
+
+class FlexPage(Page):
+    """
+    Abstract Page Extension
+    Define abstract to dont create own database table for this model - fields are created in the child class
+    """
+    seo_text = RichTextField(blank=True, null=True, verbose_name="SEO Text",)
+    content = StreamField(
+        [
+            ('logo_cloud_section_block', LogoCloudBlock()),
+            ('portfolio_section_block', PortfolioSectionBlock()),
+            ('testimonial_section_block', TestimonialSectionBlock()),
+            ('hero_section_block', HeroSectionBlock()),
+            ('content_section_block', ContentSectionBlock()),
+            ('feature_section_block', FeatureSectionBlock()),
+        ],
+        null=True,
+        blank=True,
+    )
 
     content_panels = Page.content_panels + [
-        FieldPanel('intro'),
-        StreamFieldPanel('body'),
+        RichTextFieldPanel("seo_text"),
+        StreamFieldPanel("content"),
     ]
+
+    template = "flex/flex_page.html"
+
+    class Meta:
+        abstract = True

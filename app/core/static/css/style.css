@@ -221,7 +221,7 @@ button:focus {
     border-radius: 0px;
     width: 100%; }
     .header_area .navbar .logo_h img {
-      height: 70px;
+      height: 50px;
       filter: brightness(1000%);
     }
     .header_area.navbar_fixed .logo_h img {
@@ -386,7 +386,7 @@ button:focus {
               display: none; } }
       .home_banner_area .banner_inner .banner_content h1 {
         margin-top: 20px;
-        font-size: 70px;
+        font-size: 59px;
         line-height: 60px;
         margin-bottom: 25px; }
         @media (max-width: 1024px) {
